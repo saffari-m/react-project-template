@@ -1,0 +1,1 @@
+{"version":3,"file":"725.d40cacdf51e9f6170548.css","mappings":"AAAA;;EAEE,mBAAmB;EACnB,YAAY;AACd","sources":["webpack://react-project-template/./src/index.css"],"sourcesContent":["html,\nbody {\n  background: #282828;\n  color: white;\n}\n"],"names":[],"sourceRoot":""}
