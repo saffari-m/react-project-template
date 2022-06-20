@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  target: "web",
   entry: {
     app: "./src/index.js",
   },
@@ -32,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.(js|jsx)$/,
@@ -50,8 +51,8 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name]_[contenthash].bundle.js",
-    chunkFilename: "[id]_[contenthash].js",
+    filename: "[name]_[contenthash:8].bundle.js",
+    chunkFilename: "[id]_[contenthash:8].js",
     clean: true,
   },
 };
