@@ -1,13 +1,19 @@
+import React from "react";
+import Router from "@routers/router";
 import ReactDOM from "react-dom";
-import Test from "./components/test";
+import "@styles/global.css";
+import { BrowserRouter } from "react-router-dom";
+const App = () => {
+  return (
+    <React.StrictMode>
+      <BrowserRouter>
+        <div>
+          <h1>Lazy Loading Example</h1>
+          <Router />
+        </div>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+};
 
-import "./index.css";
-
-const App = () => (
-  <div>
-    <Test />
-    {`Hi there, I'm React from Webpack 5.2`}
-  </div>
-);
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("root"));
